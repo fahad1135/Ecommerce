@@ -1,0 +1,49 @@
+.card {
+  width: 30%;
+
+  background-color: antiquewhite;
+  position: relative;
+  border: 1px solid rgb(221, 220, 220);
+}
+
+.card img {
+  width: 100%; /* Set the image width to fill the entire width of the card */
+  height: 100%; /* Set the image height to fill the entire height of the card */
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%; /* Cover 50% of the card's width */
+  height: 100%; /* Cover 50% of the card's height */
+  background-color: rgba(238, 26, 26, 0.9);
+  /* clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 100%); */
+  clip-path: polygon(100% 0%, -110% 1%, 23% 124%);
+}
+.overlay .title {
+  white-space: pre-wrap;
+}
+.overlay .title p {
+  padding: 33px 0 0 22px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.overlay .title a {
+  padding: 0 0 0 23px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  .overlay .title p {
+    padding: 10px 0 0 10px;
+  }
+}

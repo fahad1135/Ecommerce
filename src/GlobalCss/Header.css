@@ -1,0 +1,158 @@
+.hearder-container {
+  background: rgb(26, 26, 26);
+  width: 100%;
+}
+.header {
+  width: 87.96%;
+  margin: 0 65px;
+  padding: 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo button {
+  background: none;
+  border: none;
+}
+.header .logo .micon .fa-bars {
+  font-size: xx-large;
+  color: beige;
+  margin-right: 12px;
+}
+.header .logo .micon .fa-xmark {
+  font-size: xx-large;
+  color: beige;
+  margin-right: 12px;
+}
+
+.menu {
+  width: 200px; /* Adjust the width of the menu */
+  text-align: left;
+  position: fixed;
+  left: -100%; /* Initially hide the menu outside the viewport */
+
+  list-style: none;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  transition: left 0.5s; /* Apply transition only to the left property */
+}
+
+.activeMenu {
+  left: 0; /* Bring the menu into view */
+  top: 100px; /* Adjust top position as needed */
+  z-index: 1;
+}
+
+.menu ul {
+  padding: 0; /* Remove default padding from the list */
+}
+
+.menu ul li {
+  padding: 10px;
+}
+
+.hearder-container .menu ul li a {
+  display: block; /* Ensure links fill the entire list item */
+  font-size: 16px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none; /* Remove default underline from links */
+}
+
+.menu ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Add hover effect */
+}
+
+.header .logo a {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 2px;
+}
+.header .logo a span {
+  color: red;
+  font-size: 60px;
+}
+
+.input-group {
+  width: 550px;
+  height: 41px;
+  display: flex;
+}
+.input-group .select select {
+  border-radius: 25px 0 0 25px;
+  border: none;
+  padding: 11px;
+  outline: none;
+  border-right: 2px solid rgb(182, 178, 178);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(156, 155, 155);
+}
+.input-group .feild {
+  display: flex;
+  flex-grow: 1;
+}
+.input-group .feild input {
+  display: flex;
+  flex-grow: 1;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.input-group .button button {
+  border: none;
+  padding: 13px;
+  border-radius: 0 25px 25px 0;
+  background-color: rgb(214, 57, 57);
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.icon-container {
+  display: flex;
+  gap: 40px;
+}
+
+.icon-container .iconbox1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-container .iconbox1 .icon i {
+  color: white;
+}
+.icon-container .iconbox1 .icon-link a {
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .input-group {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .header .logo .fa-bars {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .icon-container {
+    display: none;
+  }
+  .header {
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,13 @@
+.product-section {
+  margin: 25px 65px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 87.96%;
+}
+
+@media (max-width: 767px) {
+  .product-section {
+    margin: 25px auto;
+  }
+}
