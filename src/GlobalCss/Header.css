@@ -26,25 +26,25 @@
 }
 
 .menu {
-  width: 200px; /* Adjust the width of the menu */
+  width: 200px;
   text-align: left;
   position: fixed;
-  left: -100%; /* Initially hide the menu outside the viewport */
+  left: -100%;
 
   list-style: none;
   height: 100vh;
   background-color: rgb(255, 255, 255);
-  transition: left 0.5s; /* Apply transition only to the left property */
+  transition: left 0.5s;
 }
 
 .activeMenu {
-  left: 0; /* Bring the menu into view */
-  top: 100px; /* Adjust top position as needed */
+  left: 0;
+  top: 100px;
   z-index: 1;
 }
 
 .menu ul {
-  padding: 0; /* Remove default padding from the list */
+  padding: 0;
 }
 
 .menu ul li {
@@ -52,15 +52,15 @@
 }
 
 .hearder-container .menu ul li a {
-  display: block; /* Ensure links fill the entire list item */
+  display: block;
   font-size: 16px;
   color: black;
   font-family: "Roboto", sans-serif;
-  text-decoration: none; /* Remove default underline from links */
+  text-decoration: none;
 }
 
 .menu ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Add hover effect */
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header .logo a {
