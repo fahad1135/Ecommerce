@@ -134,8 +134,17 @@
   color: white;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
-
+.icon-container .iconbox1 .icon-link p {
+  position: absolute;
+  top: -37px;
+  right: 8px;
+  background-color: red;
+  padding: 4px 8px;
+  color: white;
+  border-radius: 50px;
+}
 @media (max-width: 1200px) {
   .input-group {
     display: none;

@@ -1,5 +1,3 @@
-import React from "react";
-
 import "../../GlobalCss/ProductSection.css";
 
 import Card from "../Card/Card";

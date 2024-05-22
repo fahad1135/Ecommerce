@@ -1,30 +1,31 @@
 import React from "react";
 import "../../GlobalCss/PrimaryNav.css";
+import { Link } from "react-router-dom";
 function PrimaryNav() {
   return (
     <div className="primarynav-container">
       <div className="primary-nav">
         <ul>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="">HotDeals</a>
+            <Link to="/hotdeal">HotDeals</Link>
           </li>
           <li>
-            <a href="">Categories</a>
+            <Link to="/categories">Categories</Link>
           </li>
           <li>
-            <a href="">Laptops</a>
+            <Link to="/laptops">Laptops</Link>
           </li>
           <li>
-            <a href="">SmartPhones</a>
+            <Link to="/smartphones">SmartPhones</Link>
           </li>
           <li>
-            <a href="">Cameras</a>
+            <Link to="cameras">Cameras</Link>
           </li>
           <li>
-            <a href="">Accessories</a>
+            <Link to="accessories">Accessories</Link>
           </li>
         </ul>
       </div>

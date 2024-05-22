@@ -1,20 +1,21 @@
-import React from "react";
 import "../../GlobalCss/CollectionCard.css";
-import img from "../../assets/360_F_328379347_xEKgEB2wkjAJmcqSTmrg4uKxfWrlL7D9.jpg";
-export default function CollectionCard() {
+import { addToCart } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
+
+export default function CollectionCard({ id, image, price, pName }) {
+  const dispatch = useDispatch();
+
   return (
     <div className="collection-card">
-      <div className="card-img">
-        <img src={img} alt="" />
-      </div>
+      <div className="card-img">{<img src={image} alt={pName} />}</div>
       <div className="category">
         <p>category</p>
         <div className="p-name">
-          <p>Product Name Gose Here</p>
+          <p>{pName}</p>
         </div>
         <div className="price">
           <p>
-            $980.00 <span>$990.00</span>
+            ${price} <span>$990.00</span>
           </p>
         </div>
         <div className="stars">
@@ -38,15 +39,31 @@ export default function CollectionCard() {
         </div>
         <div className="icons">
           <div className="heart">
-            <i class="fa-regular fa-heart"></i>
+            <i className="fa-regular fa-heart"></i>
           </div>
           <div className=" arrow">
-            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            <i className="fa-solid fa-arrow-right-arrow-left"></i>
           </div>
           <div className="eye">
-            <i class="fa-regular fa-eye"></i>
+            <i className="fa-regular fa-eye"></i>
           </div>
         </div>
+      </div>
+      <div className="add-btn">
+        <button
+          onClick={() =>
+            dispatch(
+              addToCart({
+                id,
+                pName,
+                image,
+                price,
+              })
+            )
+          }
+        >
+          Add to cart
+        </button>
       </div>
     </div>
   );
